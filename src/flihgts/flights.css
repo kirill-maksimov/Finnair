@@ -1,0 +1,9 @@
+.flights-wrapper {
+    max-width: 30rem;
+    box-sizing: content-box;
+}
+
+.flight-filters {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

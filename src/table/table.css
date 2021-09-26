@@ -1,0 +1,13 @@
+table {
+    border: 1px solid #dee2e6;
+    font-size: 13px;
+}
+
+.table-wrapper {
+    padding-top: 50px;
+}
+
+.buttons-wrapper {
+    text-align: center;
+    margin: 40px;
+}
