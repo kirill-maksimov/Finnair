@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./flights.css";
 import {useDispatch, useSelector} from "react-redux";
 import FlightFilter from "./flights-filter/flightsFilter";
-import {updateFlights} from "../flihgts/flights.action";
+import {updateFlights} from "../flights/flights.action";
 
 
 function FlightsContainer() {
