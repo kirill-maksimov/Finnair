@@ -46,16 +46,19 @@ const FlightFilter = props => {
   }
 
   return inputContent.map((content, i) => (
-    <div className="mb-3" key={i}>
+    <div className="mb-3 wrapper" key={i}>
       {
         i === 0 ? (
           <div>
-            <div className="form-label">{content}</div>
+            <div className="form-label label">{content}</div>
             <DatePicker selected={startDate} dateFormat="yyyy-MM-dd" onChange={(date) => setDate(null, param[i], date)}/>
+            <div className='validation-tip'>
+              Insert date
+            </div>
           </div>
         ) : (
           <div>
-            <label htmlFor={content} className="form-label">{content}</label>
+            <label htmlFor={content} className="form-label label">{content}</label>
             <input
               onChange={e => handleChange(e, param[i])}
               type="text"
@@ -63,10 +66,14 @@ const FlightFilter = props => {
             />
             {
               filterErrors[param[i]] ? (
-                <div className="error">
-                  Not valid!
+                <div className="validation-error">
+                  Not valid
                 </div>
-              ) : (<div className={params[param[i]] ? 'hidden' : ''}>Insert value</div>)
+              ) : (
+                <div className={params[param[i]] ? 'hidden' : 'validation-tip'}>
+                  Insert value
+                </div>
+              )
             }
           </div>
         )

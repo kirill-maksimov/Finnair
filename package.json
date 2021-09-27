@@ -40,5 +40,8 @@
   },
   "optionalDependencies": {
     "cypress": "^6.6.0"
+  },
+  "devDependencies": {
+    "prettier": "2.4.1"
   }
 }

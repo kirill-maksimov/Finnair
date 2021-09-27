@@ -1,9 +1,44 @@
 .flights-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 30rem;
     box-sizing: content-box;
+    padding: 35px;
+    background-color: #e9eaeb;
 }
 
 .flight-filters {
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.submit-button {
+    height: 64px;
+    width: 100px;
+    background-color: #00aca6;
+    color: #fff;
+    font: 18px Helvetica;
+    font-weight: 700;
+    border-radius: 0;
+    align-self: flex-end;
+}
+
+.submit-button:focus {
+    box-shadow: none;
+}
+
+.submit-button:hover {
+    color: #fff;
+    background-color: #00cfca;
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Amplitude", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin-bottom: 30px;
+    color: #1d0061;
 }

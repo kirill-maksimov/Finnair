@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+input {
+  color: #1d0061;
+  font-weight: 600;
+  font-family: Amplitude, serif;
+}
+
 #root {
   padding: 100px;
+}
+
+.react-datepicker__input-container input {
+  border: 1px solid #ced4da;
 }

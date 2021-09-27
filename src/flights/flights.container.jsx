@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import "./flights.css";
 import {useDispatch, useSelector} from "react-redux";
 import FlightFilter from "./flights-filter/flightsFilter";
 import {updateFlights} from "../flights/flights.action";
+import "./flights.css";
 
 
 function FlightsContainer() {
@@ -54,6 +54,7 @@ function FlightsContainer() {
 
   return (
     <div className="container-lg flights-wrapper">
+      <h1 className="heading">FIND FLIGHTS</h1>
       <div className="flight-filters">
         <FlightFilter
           inputContent={inputContent}
@@ -61,7 +62,8 @@ function FlightsContainer() {
           params={flightsFilters}
         />
       </div>
-      <button onClick={() => dispatch(updateFlights(filterFlights()))} className="btn btn-primary">SHOW</button>
+      <button
+        onClick={() => dispatch(updateFlights(filterFlights()))} className="btn submit-button">SHOW</button>
     </div>
   );
 }
