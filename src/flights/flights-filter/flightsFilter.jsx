@@ -39,7 +39,7 @@ const FlightFilter = props => {
     if (!e.target.value.match(validatorsMap[param])) {
       setFilterErrors({
         ...filterErrors,
-        [param]: 'Not valid!',
+        [param]: 'Not valid',
       });
     } else {
       setFilterErrors({
