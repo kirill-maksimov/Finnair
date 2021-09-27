@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import FlightFilter from "./flights-filter/flightsFilter";
-import {updateFlights} from "../flights/flights.action";
-import "./flights.css";
-
+import { useDispatch, useSelector } from 'react-redux';
+import FlightFilter from './flights-filter/flightsFilter';
+import { updateFlights } from '../flights/flights.action';
+import './flights.css';
 
 function FlightsContainer() {
   const inputContent = [
@@ -30,7 +29,9 @@ function FlightsContainer() {
   };
 
   const filterByAircraftTypes = (value, filteredObj) => {
-    return filteredObj?.filter(flight => value?.split(' ').some(it => it === flight.aircraftType));
+    return filteredObj?.filter(flight =>
+      value?.split(' ').some(it => it === flight.aircraftType),
+    );
   };
 
   const filterFlights = () => {
@@ -42,15 +43,15 @@ function FlightsContainer() {
         return filterByAircraftTypes(value[1], acc);
       }
       return filterByParams(value[0], value[1], acc);
-    }, flights)
+    }, flights);
   };
 
   const setFilter = (e, param, date) => {
     setFlightsFilters({
       ...flightsFilters,
       [param]: e?.target?.value || date,
-    })
-  }
+    });
+  };
 
   return (
     <div className="container-lg flights-wrapper">
@@ -63,10 +64,13 @@ function FlightsContainer() {
         />
       </div>
       <button
-        onClick={() => dispatch(updateFlights(filterFlights()))} className="btn submit-button">SHOW</button>
+        onClick={() => dispatch(updateFlights(filterFlights()))}
+        className="btn submit-button"
+      >
+        SHOW
+      </button>
     </div>
   );
 }
 
 export default FlightsContainer;
-

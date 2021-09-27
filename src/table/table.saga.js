@@ -1,8 +1,10 @@
-import {put, takeEvery, all} from 'redux-saga/effects';
+import { put, takeEvery, all } from 'redux-saga/effects';
 import {
-  GET_FLIGHTS, GET_FLIGHTS_SUCCESS, GET_FLIGHTS_ERROR,
-} from "../consts/actions-types";
-import { getFlightsData } from "../consts/flights-data";
+  GET_FLIGHTS,
+  GET_FLIGHTS_SUCCESS,
+  GET_FLIGHTS_ERROR,
+} from '../consts/actions-types';
+import { getFlightsData } from '../consts/flights-data';
 
 export function* getFlightsSaga() {
   try {
@@ -17,7 +19,5 @@ export function* getFlightsSaga() {
 }
 
 export default function* tableSagas() {
-  yield all([
-    takeEvery(GET_FLIGHTS, getFlightsSaga),
-  ]);
-};
+  yield all([takeEvery(GET_FLIGHTS, getFlightsSaga)]);
+}
